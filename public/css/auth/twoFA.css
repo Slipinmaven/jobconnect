@@ -1,0 +1,164 @@
+/* ===== 2FA SPECIFIC STYLES ===== */
+/* Add these styles to your existing main.css */
+
+.twofa-card {
+  max-width: 460px;
+  width: 100%;
+  margin: 2rem auto;
+  background: var(--bg-secondary);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+}
+
+.icon-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.shield-icon {
+  width: 72px;
+  height: 72px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2.2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.code-input-group {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 2rem 0 1rem;
+}
+
+.digit-box {
+  width: 58px;
+  height: 68px;
+  border: 2px solid var(--border-color);
+  border-radius: 16px;
+  background: var(--bg-primary);
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  transition: all 0.15s;
+  box-shadow: var(--shadow-sm);
+}
+
+.digit-box:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.2);
+}
+
+.digit-box::-webkit-outer-spin-button,
+.digit-box::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.digit-box[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.timer-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 1.2rem 0 1.8rem;
+}
+
+.recovery-link {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--border-color);
+  cursor: pointer;
+}
+
+.recovery-link:hover {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.trust-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  background: var(--bg-tertiary);
+  padding: 0.85rem 1.2rem;
+  border-radius: 40px;
+  margin: 1.5rem 0 1rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-color);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+}
+
+#timerDisplay {
+  cursor: pointer;
+}
+
+#timerDisplay:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+  .twofa-card {
+    padding: 2rem 1.25rem;
+    margin: 1rem;
+  }
+  .digit-box {
+    width: 48px;
+    height: 58px;
+    font-size: 1.8rem;
+  }
+  .code-input-group {
+    gap: 0.4rem;
+  }
+  .footer-links {
+    gap: 1.5rem;
+  }
+}

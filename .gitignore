@@ -1,0 +1,48 @@
+# Dependencies
+/vendor/
+/composer.phar
+
+# Local environment and secrets
+/.env
+/.env.*
+!/.env.example
+
+# Runtime data
+/storage/cache/
+/storage/logs/
+/storage/sessions/
+/storage/mail/
+/public/uploads/cvs/
+/public/uploads/profile_photos/
+/public/uploads/employer_logos/
+/app/public/uploads/
+
+# Local databases and dumps (keep checked-in schema files)
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.sql.gz
+
+# IDE and OS files
+/.vscode/
+/.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Temporary, log, and backup files
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.cache
+
+# Build output
+/build/
+/dist/
